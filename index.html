@@ -1,1 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QR Code Generator</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome Icons  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <form>
+        <h2 class="heading">QR Code Generator</h2>
+    
+        <input type="url" id="website" name="website" placeholder="Enter any website" required />
+    
+        <div id="qrcode-container">
+            <div id="qrcode" class="qrcode"></div>
+        </div>
+    
+        <button type="button" class="generateBtn" onclick="generateQRCode()">Generate QR Code</button>
+        <p id="scan">Scan and Redirect that Website.</p>
+    </form>
 
+    <script>
+      function generateQRCode() {
+    let website = document.getElementById("website").value;
+    if (website) {
+        document.getElementById("scan").style.display = "block"
+        
+        let qrcodeContainer = document.getElementById("qrcode");
+        qrcodeContainer.innerHTML = "";
+        new QRCode(qrcodeContainer, website);
+
+        document.getElementById("qrcode-container").style.display = "block";
+
+        
+    } else {
+        alert("Please enter a valid URL");
+    }
+}
+    </script>
+    <style>
+      body {
+    display: flex;
+    font-family: poppins;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    height: 600px;
+}
+
+form {
+    height: 35rem;
+    width: 20rem;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.heading {
+    text-align: center;
+    background: deepskyblue;
+    color: white;
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 10px 0;
+    width: 100%;
+}
+
+#website {
+    width: 80%;
+    height: 30px;
+    outline: none;
+    border: none;
+    background: gainsboro;
+    padding: 0 10px;
+    margin-bottom: 20px;
+}
+
+input {
+    font-family: poppins;
+    transition: 0.3s;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.generateBtn {
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    margin: 20px;
+}
+
+#scan {
+    display: none;
+}
+    </style>
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+  </body>
+</html>
