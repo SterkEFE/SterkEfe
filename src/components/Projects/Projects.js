@@ -34,17 +34,6 @@ function Projects() {
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath="https://cdn.discordapp.com/attachments/1197508998715412480/1216373552950022275/SterkGaming.png?ex=66002726&is=65edb226&hm=3f00dc01de6c8a96163627513b83378719774facafac3c968024c114fe0d766a&"
-              isBlog={false}
-              title="Sterk Gaming"
-              description="Pubg Mobile Üzerinde Gelişmiş Bir Ekip Olan Sterk Gaming'e Özel Olarak Yaptığım Web Site Açık Kaynak Kodlarını Ve Site Görünümünü İnceleyebilirsiniz."
-              ghLink="https://github.com/SterkEFE/SterkGaming"
-              demoLink="https://sterkgaming.vercel.app/"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
               imgPath="https://cdn.discordapp.com/attachments/1197508998715412480/1216371304878313532/WizyXWeb.png?ex=6600250e&is=65edb00e&hm=e2534d7cc00935cd21f4e9cc73591c2d540846799354a59139589c149200f5a9&"
               isBlog={false}
               title="WizyX Web"
@@ -62,28 +51,6 @@ function Projects() {
               description="Discord Sunucusu İçin Web Sitesi İsteyen Arkadaşıma Yaptığım Projem. Açık Kaynak Kodlarını Ve Sitenin Görünümünü İnceleyebilirsiniz. Sunucuya da Katılırsanız Sevinirim Büyültmeye Çalıyor.😄"
               ghLink="https://github.com/SterkEFE/Mace"
               demoLink="https://maceracilar.vercel.app"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={suicide}
-              isBlog={false}
-              title="QrCode Oluşturucu"
-              description="Can Sıkıntısına Denediğim Projelerin Olduğu Yerde Bulunan, Girdiğiniz Linki QrCode Çeviren Web Sitem."
-              ghLink="https://github.com/SterkEFE/SterkEfe"
-              demoLink="https://sterkefe.vercel.app/İşlem/QrCode.html" 
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath="https://cdn.discordapp.com/attachments/1197508998715412480/1216433611289657374/image.png?ex=66005f15&is=65edea15&hm=9b8bc71b5c384bc676f724d1f5c39fa0fa3a04b4a682bbfef718fddcf3293607&"
-              isBlog={false}
-              title="Tüm Projelerim;"
-              description="Can Sıkıntısından Yaptığım Tüm Projelerimi (QrCode Çevirici, Hesap Makinesi, Vb...) Görmek İstiyorsanız Aşağıdan Göz At Butonuna Basabilirsiniz."
-              ghLink="https://github.com/SterkEFE/SterkEfe"
-              demoLink="https://sterkefe.vercel.app/" 
             />
           </Col>
         </Row>
